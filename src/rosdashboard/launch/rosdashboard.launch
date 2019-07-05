@@ -1,0 +1,8 @@
+<launch>
+
+    <arg name="load_file" default="none"/>
+
+    <node pkg="rosdashboard" name="rosdashboard" type="rosdashboard.py" output="screen">
+        <param name="load_file" value="$(arg load_file)"/>
+    </node>
+</launch>

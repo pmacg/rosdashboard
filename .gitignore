@@ -12,3 +12,4 @@ srv_gen/
 .catkin_tools/
 devel/
 logs/
+**/.vscode/

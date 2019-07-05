@@ -71,11 +71,20 @@ class ROSDashboardMain(QtGui.QMainWindow):
             self.persistance.loadDashboard(fileName)
         
 def main():
-    
+    # Get the name of the save file to load, if given
+    load_file_param = rospy.get_param("/rosdashboard/load_file", default="none")
+
+    # Initialize the ros node
     rospy.init_node('rosdashboard', anonymous=True)
-    
+
+    # Create the GUI application 
     app = QtGui.QApplication(sys.argv)
     dashboardMain = ROSDashboardMain()
+
+    # Load the requested save file if given.
+    if load_file_param != 'none':
+        dashboardMain.persistance.loadDashboard(load_file_param)
+
     sys.exit(app.exec_())
     
 
