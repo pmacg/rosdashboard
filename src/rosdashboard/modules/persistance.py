@@ -1,19 +1,18 @@
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtCore #@UnresolvedImport
+from PyQt4 import QtCore #@UnresolvedImport
 
 #import xml.dom.minidom as minidom
 import os
 import json
 
 #TODO: the widgets should be importet automatically from a plugin folder
-from rosdashboard.widgets.dragDial import DragDial
-from rosdashboard.widgets.dragKnob import DragKnob
-from rosdashboard.widgets.dragCompass import DragCompass
-from rosdashboard.widgets.dragThermo import DragThermo
-from rosdashboard.widgets.dragString import DragString
-from rosdashboard.widgets.dragLed import DragLed
+from widgets.dragDial import DragDial
+from widgets.dragKnob import DragKnob
+from widgets.dragCompass import DragCompass
+from widgets.dragThermo import DragThermo
+from widgets.dragString import DragString
+from widgets.dragLed import DragLed
 
-from rosdashboard.modules.props import WidgetProperty
+from modules.props import WidgetProperty
 
 class Persistance(object):
     def __init__(self, dashboard):

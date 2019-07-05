@@ -45,6 +45,14 @@ Examples
 ------
 Imagine you are working on an algorithm to develop a line follower robot, where you have all the raw data from sensors and try to compute whether your robot should go straight, left or right. If you have some errors in your computation you will most likely end up printing the input values and some intermediary results to the console and trying to find out where your computation fails. With ROS Dashboard you can hook up your data streams to graphical widgets and get a more natural representation of the data (e.g. a horizontal bar telling you whether the robot wants to turn left, right or go straight).
 
+Building and Running
+------------
+Install dependencies with `rosdep install rosdashboard`.
+Build with `catkin build`.
+Run with `rosrun rosdashboard rosdashboard.py`.
+
+If you get an error saying that numpy could not be imported, you may need to fix it with the `fix_numpy_import_error.sh` script.
+
 Next steps
 ------------
 * add plugin functionality to add more widgets

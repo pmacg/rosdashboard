@@ -1,6 +1,5 @@
 """ module for all property classes """
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
+from PyQt4 import QtGui #@UnresolvedImport
 
 class WidgetProperty():
     

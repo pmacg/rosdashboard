@@ -1,8 +1,7 @@
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
-import QtCore #@UnresolvedImport
+from PyQt4 import QtGui #@UnresolvedImport
+from PyQt4 import QtCore #@UnresolvedImport
 
-from rosdashboard.modules.props import WidgetPropertiesDialog, WidgetRenameDialog,\
+from props import WidgetPropertiesDialog, WidgetRenameDialog,\
     WidgetSubscriptionDialog
 import rospy
 import rostopic

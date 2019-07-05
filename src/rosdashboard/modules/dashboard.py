@@ -1,8 +1,7 @@
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
-import QtCore #@UnresolvedImport
+from PyQt4 import QtGui #@UnresolvedImport
+from PyQt4 import QtCore #@UnresolvedImport
 
-from rosdashboard.modules.dashboardWidgets import DashboardWidget
+from dashboardWidgets import DashboardWidget
 
 class Dashboard(QtGui.QWidget):
     """ canvas where widgets can be positioned """ 

@@ -1,9 +1,8 @@
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
-import QtCore #@UnresolvedImport
+from PyQt4 import QtGui #@UnresolvedImport
+from PyQt4 import QtCore #@UnresolvedImport
 
-from rosdashboard.modules.props import WidgetProperty
-from rosdashboard.modules.dashboardWidgets import DashboardWidget
+from modules.props import WidgetProperty
+from modules.dashboardWidgets import DashboardWidget
 from PyQt4.Qwt5 import Qwt
 from PyQt4.Qwt5.anynumpy import *
 

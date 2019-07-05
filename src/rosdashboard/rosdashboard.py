@@ -4,8 +4,7 @@ import rospy
 
 import sys
 
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
+from PyQt4 import QtGui 
 
 from modules.dashboard import Dashboard
 from modules.toolbox import Toolbox        

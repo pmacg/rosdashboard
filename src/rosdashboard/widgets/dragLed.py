@@ -1,11 +1,10 @@
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
-import QtCore #@UnresolvedImport
+from PyQt4 import QtGui #@UnresolvedImport
+from PyQt4 import QtCore #@UnresolvedImport
 
 import rospkg
 import os
 
-from rosdashboard.modules.dashboardWidgets import DashboardWidget
+from modules.dashboardWidgets import DashboardWidget
 
 class DragLed(DashboardWidget):
     updateUiSignal = QtCore.pyqtSignal(QtGui.QImage)

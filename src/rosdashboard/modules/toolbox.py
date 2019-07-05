@@ -1,14 +1,13 @@
-from python_qt_binding.QtBindingHelper import QT_BINDING, QT_BINDING_VERSION #@UnresolvedImport @UnusedImport
-import QtGui #@UnresolvedImport
-import QtCore #@UnresolvedImport
+from PyQt4 import QtGui #@UnresolvedImport
+from PyQt4 import QtCore #@UnresolvedImport
 
-from rosdashboard.widgets.dragDial import DragDial
-from rosdashboard.widgets.dragKnob import DragKnob
-from rosdashboard.widgets.dragCompass import DragCompass
-from rosdashboard.widgets.dragThermo import DragThermo
-from rosdashboard.widgets.dragString import DragString
-from rosdashboard.widgets.dragLed import DragLed
-from rosdashboard.widgets.dragPlot import DragPlot
+from widgets.dragDial import DragDial
+from widgets.dragKnob import DragKnob
+from widgets.dragCompass import DragCompass
+from widgets.dragThermo import DragThermo
+from widgets.dragString import DragString
+from widgets.dragLed import DragLed
+from widgets.dragPlot import DragPlot
 
 class Toolbox(QtGui.QGroupBox):
     """ widget toolbox to choose widgets from """
