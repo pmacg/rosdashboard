@@ -9,3 +9,6 @@ build/
 lib/
 msg_gen/
 srv_gen/
+.catkin_tools/
+devel/
+logs/
