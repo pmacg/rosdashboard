@@ -4,13 +4,14 @@ from PyQt4 import QtCore #@UnresolvedImport
 import os
 import json
 
-#TODO: the widgets should be importet automatically from a plugin folder
+#TODO: the widgets should be imported automatically from a plugin folder
 from widgets.dragDial import DragDial
 from widgets.dragKnob import DragKnob
 from widgets.dragCompass import DragCompass
 from widgets.dragThermo import DragThermo
 from widgets.dragString import DragString
 from widgets.dragLed import DragLed
+from widgets.dragNodeAlive import DragNodeAlive
 
 from modules.props import WidgetProperty
 

@@ -8,6 +8,7 @@ from widgets.dragThermo import DragThermo
 from widgets.dragString import DragString
 from widgets.dragLed import DragLed
 from widgets.dragPlot import DragPlot
+from widgets.dragNodeAlive import DragNodeAlive
 
 class Toolbox(QtGui.QGroupBox):
     """ widget toolbox to choose widgets from """
@@ -66,3 +67,7 @@ class Toolbox(QtGui.QGroupBox):
         dragPlotItem = QtGui.QListWidgetItem("Plot")
         dragPlotItem.setData(QtCore.Qt.UserRole, DragPlot)
         self.listWidget.addItem(dragPlotItem)
+
+        dragNodeAlive = QtGui.QListWidgetItem("Node Alive")
+        dragNodeAlive.setData(QtCore.Qt.UserRole, DragNodeAlive)
+        self.listWidget.addItem(dragNodeAlive)
