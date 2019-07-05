@@ -49,7 +49,9 @@ Building and Running
 ------------
 Install dependencies with `rosdep install rosdashboard`.
 Build with `catkin build`.
-Run with `rosrun rosdashboard rosdashboard.py`.
+Run with `roslaunch rosdashboard rosdashboard.launch`.
+
+You can specify a saved dashboard to load on startup with the `load_file` parameter to the launch file.
 
 If you get an error saying that numpy could not be imported, you may need to fix it with the `fix_numpy_import_error.sh` script.
 
