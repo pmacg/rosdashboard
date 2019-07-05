@@ -13,7 +13,7 @@ class DragLed(DashboardWidget):
         super(DragLed, self).__init__(parent)
         self.setTitle('DragLed')
         
-        #get the images from the res folder
+        # Get the images from the res folder
         r = rospkg.RosPack()
         p = r.get_path('rosdashboard')
         base = os.path.join(p, 'res')

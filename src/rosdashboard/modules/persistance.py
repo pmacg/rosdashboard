@@ -27,50 +27,17 @@ class Persistance(object):
         filedata = _file.read()
         _file.close()
         
-        # parse file data
-        name, extension = os.path.splitext(filename)
-        if (extension == ".xml"):
-            print "load from xml: " + filename
-            self.loadFromXML(self, filedata)
-        elif (extension == ".json"):
-            print "load from json: " + filename
-            self.loadFromJSON(filedata)
-        else:
-            print "I don't know how to handle file extension " + extension + "; I only know .json and .xml"
+        # Parse file data. Always parse as json
+        self.loadFromJSON(filedata)
             
     def saveDashboard(self, filename):
-        # route to save xml or save json
-        name, extension = os.path.splitext(filename)
-        if (extension == ".xml"):
-            print "save to xml: " + filename
-            data = self.saveToJSON()
-        elif (extension == ".json"):
-            print "save to json: " + filename
-            data = self.saveToJSON()
-        else:
-            print "I don't know how to handle file extension " + extension + "; I only know .json and .xml"
-            return
-            
-        #write to file
+        # Always save as JSON
+        data = self.saveToJSON()
+
+        # Write to file
         _file = open(filename,'w')
         _file.write(data)
         _file.close()
-                    
-    def loadFromXML(self, filedata):
-        print "Not implemented yet"
-        
-        """
-
-        doc = minidom.parseString(filedata)
-        #node = doc.documentElement
-        widgets = doc.getElementsByTagName("widget")
-        
-        for widget in widgets:
-            nodes = widget.getElementsByTagName("name")[0].childNodes
-            for node in nodes:
-                if node.nodeType == node.TEXT_NODE:
-                    print "reading widget: " + node.data
-        """
         
     def loadFromJSON(self, filedata):
         data = json.loads(filedata)
