@@ -54,10 +54,9 @@ class DragLed(DashboardWidget):
         self.imageLabel.setPixmap(QtGui.QPixmap.fromImage(image))
         
     def updateValue(self, value):
-        
         if (value == None):
             self.updateUiSignal.emit(self.greyLedImage)
-        elif (value == True):
+        elif (value == True) or (value == "True"):
             self.updateUiSignal.emit(self.greenLedImage)
         else:
             self.updateUiSignal.emit(self.redLedImage)
